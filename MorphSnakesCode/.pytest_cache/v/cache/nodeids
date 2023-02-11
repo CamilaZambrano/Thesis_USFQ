@@ -1,9 +1,0 @@
-[
-  "test_morphsnakes.py::test_init_level_sets",
-  "test_morphsnakes.py::test_morphsnakes_3d",
-  "test_morphsnakes.py::test_morphsnakes_black",
-  "test_morphsnakes.py::test_morphsnakes_incorrect_image_shape",
-  "test_morphsnakes.py::test_morphsnakes_incorrect_ndim",
-  "test_morphsnakes.py::test_morphsnakes_simple_shape_chan_vese",
-  "test_morphsnakes.py::test_morphsnakes_simple_shape_geodesic_active_contour"
-]
