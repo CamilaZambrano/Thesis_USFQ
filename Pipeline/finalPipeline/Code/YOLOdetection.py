@@ -7,7 +7,6 @@ import os
 
 import cropSingleImage as crop
 import testCropF as AC
-#import metrics_one as metric
 
 def grayscale(inputPath, outputPath):
     img_rgb = Image.open(inputPath)
@@ -96,8 +95,3 @@ for imageOriginal in imagesOriginal:
             # overlay the original image, the obtained masks and the actual mask
             eng.paintROI(idImage, nargout=0)
             eng.quit()
-
-# obtain the metrics for GAC
-# metric.metrics('GAC')
-# obtain the metrics for CV
-# metric.metrics('CV')
