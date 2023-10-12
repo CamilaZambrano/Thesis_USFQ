@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['Mass']
+
+roboflow:
+  workspace: universidad-san-francisco-de-quito
+  project: mammography-mass-detection
+  version: 7
+  license: MIT
+  url: https://universe.roboflow.com/universidad-san-francisco-de-quito/mammography-mass-detection/dataset/7
