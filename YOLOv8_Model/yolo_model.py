@@ -1,9 +1,6 @@
-
-
 from ultralytics import YOLO
 from yolo_config import Config
 from yolo_file_manager import FileManager
-
 
 class YoloModel:
     def __init__(self, file_manager:FileManager):

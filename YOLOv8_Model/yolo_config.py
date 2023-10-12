@@ -1,7 +1,4 @@
-
-
 import torch
-
 
 class Config:
     ROOT = 'YOLOv8'
@@ -20,7 +17,6 @@ class Config:
     YAML_FILE = 'data_docker.yaml'
     METRICS_FILE = 'metrics.csv'
     LOCAL_ENV = False
-    
     
     def set_local_settings():
         Config.MODEL_SIZES = ['yolov8n.pt']

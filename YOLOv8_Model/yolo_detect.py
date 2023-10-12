@@ -1,8 +1,5 @@
-
-
 import cv2
 import matplotlib.pyplot as plt
-
 
 def plot_detection_comparison(training_dir):
     plt.figure(figsize=(5,10), dpi=200)

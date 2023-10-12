@@ -23,15 +23,12 @@ for model_size in Config.MODEL_SIZES:
     for fold in Config.FOLDS:
 
         # Dataset
-
         file_manager.set_validation_setup(fold)
 
         # Train
-
         yolo_model.train()
     
         # Validation - Threshold Optimization
-        
         for threshold in Config.THRESHOLDS:
             valid_metrics = yolo_model.validate(threshold)
             metrics_aggregator.add_metrics(threshold, valid_metrics)
@@ -39,7 +36,6 @@ for model_size in Config.MODEL_SIZES:
         file_manager.clean_weights()
     
     # Aggregate Metrics
-    
     metrics_aggregator.finish_validation()
     metrics_aggregator.save_metrics()
     
@@ -47,7 +43,6 @@ for model_size in Config.MODEL_SIZES:
     # -----------------------
     # Testing
     # -----------------------
-    
     file_manager.set_testing_setup()
     yolo_model.train()
 

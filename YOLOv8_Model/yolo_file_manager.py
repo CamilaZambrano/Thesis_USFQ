@@ -1,10 +1,6 @@
-
-
 import os
 import shutil
-
 from yolo_config import Config
-
 
 class FileManager:
     def __init__(self, model_size):
@@ -28,12 +24,10 @@ class FileManager:
         self.project = os.path.join(self.model_dir, 'test')
         self.weights_path = os.path.join(self.project, 'train', 'weights')
     
-    
     def get_fold_name(self):
         return self.fold_name
     
     # Clean
-    
     def clean_model_runs(self):
         print("Cleaning Runs: ", self.model_dir)
         if os.path.exists(self.model_dir):
@@ -43,8 +37,7 @@ class FileManager:
         print("Cleaning Weights: ", self.weights_path)
         shutil.rmtree(self.weights_path)
         
-    # Projects to log
-        
+    # Projects to log   
     def get_train_project(self):
         return self.project
     
@@ -60,7 +53,6 @@ class FileManager:
         return self.metrics_path
     
     # Weights
-    
     def get_pretrained_weights(self):
         return self.pretrained_weights
     
