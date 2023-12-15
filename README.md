@@ -17,6 +17,6 @@ La base de datos utilizada para este proyecto fue INbreast y se puede encontrar 
 ## Procesamiento de la base de datos: 
 1. Se uso el programa de Osirix para poder obtener las imágenes que tenían masas y, de igual manera, se obtuvieron las coordenadas de la curva del contorno de las masas (carpeta Jsons en Python_Code).
 2. Utilizando jsonFilesSingleMasses.py y jsonFilesMultipleMasses.py (carpeta Python_Code), se contruieron los archivos .txt (carpeta Python_Code/Coordenates/INbreastCurves)
-3. Uitlizando building_mask_GT.m (Matlab_Code), se obtuvieron las máscaras binarias para las imágenes que tenían masas
-4. Se utilizo https://products.aspose.app/imaging/es/conversion/dcm-to-jpg para poder pasar la imágenes con masas del formato .dcm a .jpg (carpeta Database)
+3. Uitlizando building_mask_GT.m (Matlab_Code), se obtuvieron las máscaras binarias para las imágenes que tenían masas (Matlab_Code/masks)
+4. Se utilizo https://products.aspose.app/imaging/es/conversion/dcm-to-jpg para poder pasar la imágenes con masas del formato .dcm a .jpg (Python_Code/INbreast)
 6. 
