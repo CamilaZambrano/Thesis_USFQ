@@ -10,7 +10,7 @@ Desarrollar un método de segmentación basado en técnicas de procesamiento dig
 4. Instalar en el IDE que se este usando las librearias requeridas usando el comando de la linea x del archivo install_conda.txt
 5. Crear las carpeta acResultMasks y dentro de esta, las carpetas CV y GAC  
     **Nota:** CV iniciales para Chan-Vase y GAC iniciales para Geodésico
-6. Correr el archivo test crop (los modelos están seteados por default con las configuraciones que dieron los mejores resultados)
+6. Correr el archivo runActiveContours.py (los modelos están seteados por default con las configuraciones que dieron los mejores resultados)
 
 ## Base de Datos Original:
 La base de datos utilizada para este proyecto fue INbreast y se puede encontrar en https://www.kaggle.com/datasets/ramanathansp20/inbreast-dataset?resource=download
