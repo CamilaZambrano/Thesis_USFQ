@@ -138,7 +138,7 @@ def GAC_active_contour(x, y, input_path, BWoutput_pathGAC):
     array = ms.morphological_geodesic_active_contour(gimg, iterations=88,
                                              init_level_set=init_ls,
                                              smoothing=1, threshold=0.31,
-                                             balloon=1, iter_callback=callback)
+                                             balloon=1)
     # Save masks
     for i, element in enumerate(array):
         image_u = Image.fromarray((element * 255).astype(np.uint8), mode='L')
@@ -159,8 +159,7 @@ def CV_active_contour(x, y, input_path, BWoutput_pathCV):
     # Morphological Chan-Vese (or ACWE)
     array = ms.morphological_chan_vese(img, iterations=436,
                                init_level_set=init_ls,
-                               smoothing=3, lambda1=1, lambda2=1,
-                               iter_callback=callback)
+                               smoothing=3, lambda1=1, lambda2=1)
 
     #Save masks
     for i, element in enumerate(array):
@@ -179,13 +178,11 @@ if __name__ == '__main__':
             data = file.readline().strip().split(',')
 
             # Asignar los datos a variables
-            id_name = data[0]
-            id_number = data[1]
-            x = float(data[2])
-            y = float(data[3])
+            file_name = data[0]
+            x = float(data[1])
+            y = float(data[2])
 
-            file_name = id_name + '_' + id_number
-            image_name = id_name + '_Mass_' + id_number + '_F.jpg'
+            image_name = file_name + '_F.jpg'
 
             input_path = 'ActiveContoursCode/Crop/images/' + image_name
             BWoutput_pathCV = 'ActiveContoursCode/acResultsMasks/CV/mask_CVBWC_' + file_name
