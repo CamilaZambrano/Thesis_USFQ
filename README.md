@@ -16,4 +16,4 @@ Desarrollar un método de segmentación basado en técnicas de procesamiento dig
 La base de datos utilizada para este proyecto fue INbreast y se puede encontrar en https://www.kaggle.com/datasets/ramanathansp20/inbreast-dataset?resource=download
 
 ## Importante:
-Dado a que este proyecto forma parte de un proyecto de investigación el código para la creación de la base de datos experimental y la máscaras creadas para obtener las métricas no vienen adjuntos. 
+Dado a que este proyecto forma parte de un proyecto de investigación, el código para la creación de la base de datos experimental y la máscaras creadas para obtener las métricas no vienen adjuntos. 
