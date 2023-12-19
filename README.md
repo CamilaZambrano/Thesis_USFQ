@@ -1,6 +1,6 @@
 # Segmentación de Masas de Cáncer de Mama Utilizando Técnicas de Procesamiento Digital de Imágenes
 
-## Ojetivo del Proyecto:
+## Objetivo del Proyecto:
 Desarrollar un método de segmentación basado en técnicas de procesamiento digital de imágenes para maximizar el desempeño de la segmentación de masas en imágenes de mamografías.
  
 ## Modo de Uso:
@@ -16,4 +16,4 @@ Desarrollar un método de segmentación basado en técnicas de procesamiento dig
 La base de datos utilizada para este proyecto fue INbreast y se puede encontrar en https://www.kaggle.com/datasets/ramanathansp20/inbreast-dataset?resource=download
 
 ## Importante:
-Dado a que este proyecto forma parte de un trabajo de investigacion el código para la creación de la base de datos experimental y la máscaras creadas para obtener las métricas no vienen adjuntos. 
+Dado a que este proyecto forma parte de un proyecto de investigación el código para la creación de la base de datos experimental y la máscaras creadas para obtener las métricas no vienen adjuntos. 
