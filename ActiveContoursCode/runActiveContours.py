@@ -132,13 +132,13 @@ def GAC_active_contour(x, y, input_path, BWoutput_pathGAC):
     init_ls = ms.circle_level_set(img.shape, (y, x), 50)
 
     # Callback for visual plotting
-    #callback = visual_callback_2d(img)
+    callback = visual_callback_2d(img)
 
     # MorphGAC.
     array = ms.morphological_geodesic_active_contour(gimg, iterations=88,
                                              init_level_set=init_ls,
                                              smoothing=1, threshold=0.31,
-                                             balloon=1, iter_callback=None)
+                                             balloon=1, iter_callback=callback)
     # Save masks
     for i, element in enumerate(array):
         image_u = Image.fromarray((element * 255).astype(np.uint8), mode='L')
@@ -154,13 +154,13 @@ def CV_active_contour(x, y, input_path, BWoutput_pathCV):
     init_ls = ms.circle_level_set(img.shape, (y, x), 40)
 
     # Callback for visual plotting
-    #callback = visual_callback_2d(img)
+    callback = visual_callback_2d(img)
 
     # Morphological Chan-Vese (or ACWE)
     array = ms.morphological_chan_vese(img, iterations=436,
                                init_level_set=init_ls,
                                smoothing=3, lambda1=1, lambda2=1,
-                               iter_callback=None)
+                               iter_callback=callback)
 
     #Save masks
     for i, element in enumerate(array):
