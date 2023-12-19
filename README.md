@@ -8,7 +8,7 @@ Desarrollar un método de segmentación basado en técnicas de procesamiento dig
 2. Descargar la carpeta con el código
 3. Opcional: crear un ambiente virutal, usar como guia el archivo virtualEnv.txt
 4. Instalar en el IDE que se este usando, las librearias requeridas usando el comando de la linea 3 del archivo virtualEnv.txt
-5. Crear las carpeta acResultMasks y dentro de esta, las carpetas CV y GAC  
+5. Crear dentro de ActiveContoursCode la carpeta acResultMasks y dentro de esta, las carpetas CV y GAC  
     **Nota:** CV iniciales para Chan-Vase y GAC iniciales para Geodésico
 6. Correr el archivo runActiveContours.py (los modelos están seteados por default con las configuraciones que dieron los mejores resultados)
 
