@@ -129,13 +129,13 @@ def GAC_active_contour(x, y, input_path, BWoutput_pathGAC):
     gimg = ms.inverse_gaussian_gradient(img, alpha=1000, sigma=5.48)
 
     # Initialization of the level-set.
-    init_ls = ms.circle_level_set(img.shape, (y, x), 40)
+    init_ls = ms.circle_level_set(img.shape, (y, x), 50)
 
     # Callback for visual plotting
     callback = visual_callback_2d(img)
 
     # MorphGAC.
-    array = ms.morphological_geodesic_active_contour(gimg, iterations=150,
+    array = ms.morphological_geodesic_active_contour(gimg, iterations=88,
                                              init_level_set=init_ls,
                                              smoothing=1, threshold=0.31,
                                              balloon=1, iter_callback=callback)
@@ -151,13 +151,13 @@ def CV_active_contour(x, y, input_path, BWoutput_pathCV):
     img = imread(input_path)[..., 0] / 255.0
 
     # Initialization of the level-set.
-    init_ls = ms.circle_level_set(img.shape, (y, x), 100)
+    init_ls = ms.circle_level_set(img.shape, (y, x), 40)
 
     # Callback for visual plotting
     callback = visual_callback_2d(img)
 
     # Morphological Chan-Vese (or ACWE)
-    array = ms.morphological_chan_vese(img, iterations=150,
+    array = ms.morphological_chan_vese(img, iterations=436,
                                init_level_set=init_ls,
                                smoothing=3, lambda1=1, lambda2=1,
                                iter_callback=callback)
@@ -186,8 +186,8 @@ if __name__ == '__main__':
             image_name = file_name + '_F.jpg'
 
             input_path = 'Crop/Filtered/' + image_name
-            BWoutput_pathCV = 'Crop/Masks/ActiveCountour/CV/mask_CVBWC_' + '_' + file_name
-            BWoutput_pathGAC = 'Crop/Masks/ActiveCountour/GAC/mask_GACBWC_' + '_' + file_name
+            BWoutput_pathCV = 'acResultsMasks/CV/mask_CVBWC_' + file_name
+            BWoutput_pathGAC = 'acResultsMasks/GAC/mask_GACBWC_' + file_name
 
             GAC_active_contour(x, y, input_path, BWoutput_pathGAC)
             CV_active_contour(x, y, input_path, BWoutput_pathCV)
