@@ -169,7 +169,7 @@ def CV_active_contour(x, y, input_path, BWoutput_pathCV):
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
-    input_folder = "Crop/CenterPoints"
+    input_folder = "Crop/centerPoints"
     txtFiles = os.listdir(input_folder)
 
     for txt in txtFiles:
@@ -185,7 +185,7 @@ if __name__ == '__main__':
 
             image_name = file_name + '_F.jpg'
 
-            input_path = 'Crop/Filtered/' + image_name
+            input_path = 'Crop/images/' + image_name
             BWoutput_pathCV = 'acResultsMasks/CV/mask_CVBWC_' + file_name
             BWoutput_pathGAC = 'acResultsMasks/GAC/mask_GACBWC_' + file_name
 
@@ -193,4 +193,3 @@ if __name__ == '__main__':
             CV_active_contour(x, y, input_path, BWoutput_pathCV)
 
     logging.info("Done.")
-    plt.show()
