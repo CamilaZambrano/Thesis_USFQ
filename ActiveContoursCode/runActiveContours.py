@@ -131,9 +131,6 @@ def GAC_active_contour(x, y, input_path, BWoutput_pathGAC):
     # Initialization of the level-set.
     init_ls = ms.circle_level_set(img.shape, (y, x), 50)
 
-    # Callback for visual plotting
-    callback = visual_callback_2d(img)
-
     # MorphGAC.
     array = ms.morphological_geodesic_active_contour(gimg, iterations=88,
                                              init_level_set=init_ls,
@@ -152,9 +149,6 @@ def CV_active_contour(x, y, input_path, BWoutput_pathCV):
 
     # Initialization of the level-set.
     init_ls = ms.circle_level_set(img.shape, (y, x), 40)
-
-    # Callback for visual plotting
-    callback = visual_callback_2d(img)
 
     # Morphological Chan-Vese (or ACWE)
     array = ms.morphological_chan_vese(img, iterations=436,
